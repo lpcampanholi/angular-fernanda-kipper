@@ -11,9 +11,8 @@
     <p>Não está mostrando o titulo</p>
 }
 
-
 <button (click)="toggleTitle()">Mostrar título</button>
-<form class="myform" (submit)="submitForm($event)">
+<form class="myform" (submit)="submit($event)">
   <div class="campo">
       <label for="name">Nome</label>
       <input type="text" name="name" id="name" placeholder="Escreva seu nome" />
@@ -21,9 +20,15 @@
     <button class="button_form">Enviar</button>
 </form>
 
-
 <h2>Estrutura condicional</h2>
 
 @for (user of users; track user.id) {
     <p>{{user.name}}</p>
 }
+
+<h1>Sintaxe antiga</h1>
+
+<p *ngIf="deveMostrarTitulo">Condicional antiga true</p>
+<p *ngIf="!deveMostrarTitulo">Condicional antiga false</p>
+
+<p *ngFor="let user of users">{{user.name}}</p>
