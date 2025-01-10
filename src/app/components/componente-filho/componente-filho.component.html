@@ -1,9 +1,10 @@
 <h1>componente-filho works!</h1>
 <p>{{ minhaProps }}</p>
 
-<form>
-  <label for="name"></label>
+<form (submit)="submitFormFilho($event)">
+  <label for="name">Name</label>
   <input type="text" name="name" id="name" />
-  <label for="email"></label>
+  <label for="email">Email</label>
   <input type="email" name="email" id="email" />
+  <button>Submit</button>
 </form>

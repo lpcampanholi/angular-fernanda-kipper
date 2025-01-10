@@ -10,4 +10,8 @@ import { ComponenteFilhoComponent } from "../componente-filho/componente-filho.c
 })
 export class ComponentePaiComponent {
 
+  logar(event: string) {
+    console.log(event);
+  }
+
 }
